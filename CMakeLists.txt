@@ -9,6 +9,10 @@ if(KIA_SOUL)
     add_definitions(-DKIA_SOUL)
 elseif(KIA_SOUL_EV)
     add_definitions(-DKIA_SOUL_EV)
+elseif(KIA_NIRO)
+    add_definitions(-DKIA_NIRO)
+elseif(CHRYSLER_PACIFICA_HYBRID)
+    add_definitions(-DCHRYSLER_PACIFICA_HYBRID)
 endif()
 
 add_executable(
