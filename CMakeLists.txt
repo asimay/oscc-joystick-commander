@@ -5,15 +5,7 @@ project(oscc-joystick-commander)
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(SDL2 REQUIRED sdl2)
 
-if(KIA_SOUL)
-    add_definitions(-DKIA_SOUL)
-elseif(KIA_SOUL_EV)
-    add_definitions(-DKIA_SOUL_EV)
-elseif(KIA_NIRO)
-    add_definitions(-DKIA_NIRO)
-elseif(CHRYSLER_PACIFICA_HYBRID)
-    add_definitions(-DCHRYSLER_PACIFICA_HYBRID)
-endif()
+include(oscc/api/OsccConfig.cmake)
 
 add_executable(
     oscc-joystick-commander
